@@ -1,75 +1,59 @@
-        <title>Page Title</title>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+        table {
+            width:100%;
+            border: 1px solid black;
+        }
+        h1 {
+            text-align:center;
+            font-size: 32px;
+        }
+        h2 {
+            text-align:center
+        }
+        html {
+            color: #004fc4;
+            background-color:#a8cbff;
+        }
+        
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/navbar.css" />
     </head>
     <body>
-        <h1>My First Project</h1>
-        <p><i>My first paragraph.</i><p>
-        <p><b>Link down below to GitHub.com</b></p>
-        <a href= "https://github.com/">
-            GitHub </a>
-            <ul>
-                <ol><li>Cat</li></ol>
-                    <ul><li>Ragdoll</li></ul>
-                    <ul><li>Maincoon</li></ul>
-                    <ul><li>Short Hair</li></ul>
-                    <ul><li>Siamese</li></ul>
-                <ol><li>Dogs</li></ol>
-                        <ul><li>German Shepard</li></ul>
-                        <ul><li>Golden Retriever</li></ul>
-                        <ul><li>Husky</li></ul>
-                    </ol>
-                </li>
-            </ul>
-            <ul>
-                <li>Chips</li>
-                <ul><li>Doritos</li></ul>
-                <ul><li>Lays</li></ul>
-                <ul><li>Kettle</li></ul>
-                <ul><li>Cheetos</li></ul>
-                <li>Drinks</li>
-                <ul><li>Sprite</li></ul>
-                <ul><li>Coca Cola</li></ul>
-                <ul><li>Rootbeer</li></ul>
-                <ul><li>Cactus Cooler</li></ul>
-            </ul>
-
-            <table border="3px">
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contactme.html">Contact Me</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li class="dropdown">
+                <a href="#">Projects</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Project 1</a></li>
+                    <li><a href="#">Project 2</a></li>
+                    <li><a href="#">Project 3</a></li>
+                    <li><a href="#">Project 4</a></li>
+                    <li><a href="#">Project 5</a></li>
+                </ul>
+            </li>
+        </ul>
+        <h1>Home</h1>
+        <h2>Logan Munksgard</h2>
+        <p>
+            <table>
                 <tr>
-                    <th></th>
-                    <th>Apples</th>
-                    <th>Bannana</th>
-                    <th>Grapes</th>
-                    <th>Oranges</th>
+                    <td><img src="images/IMG_0365.JPG" width="200" height="210"></td>
+                    <td><img src="images/IMG_0190.JPG" width="200" height="210"></td>
+                    <td><img src="images/IMG_1669.jpg" width="200" height="210"></td>
                 </tr>
-                <tr>
-                    <td>Year 2013</td>
-                    <td>300</td>
-                    <td>200</td>
-                    <td>150</td>
-                    <td>130</td>
+                <tr style="text-align: center">
+                    <td>This is me at Kualoa Ranch in Ohau Hawaii</td>
+                    <td>This is my family on our trip to Hawaii</td>
+                    <td>These are my two cats (orange is Ginger) (black and white is Mara)</td>
                 </tr>
-                <tr>
-                    <td>Year 2012</td>
-                    <td>150</td>
-                    <td>130</td>
-                    <td>120</td>
-                    <td>220</td>
-                </tr>
-                <tr>
-                    <td>Year 2011</td>
-                    <td>100</td>
-                    <td>120</td>
-                    <td>160</td>
-                    <td>200</td>
-                </tr>
-                <tr>
-                    <td>Year 2010</td>
-                    <td>200</td>
-                    <td>300</td>
-                    <td>200</td>
-                    <td>150</td>
-                </tr>
-            </table>
-
-            
+        </table>
+    </p>
     </body>
 </html>
