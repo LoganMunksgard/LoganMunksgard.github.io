@@ -1,5 +1,5 @@
 .navbar{
-            background-color: black;
+            background-color: #2cd181;
             overflow: hidden;
             padding: 0px;
         }
@@ -28,7 +28,7 @@
 
         .dropdown-content {
             padding: 0px;
-            background-color: black;
+            background-color: #2cd181;
             display: none;
             position: absolute;
         }
