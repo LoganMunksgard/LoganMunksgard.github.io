@@ -18,6 +18,9 @@
             height: 100%;
             width: 56%;
             float: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         #right_pane {
             background-color: blue;
@@ -28,11 +31,32 @@
         #story_text {
             background-color: yellow;
             height: 80%;
-
-        #button_choices {
+            float:right;
 
         }
+        #button_choices {
+          background-color: pink;
+          height: 20%;
+          float: right;
+
+        }
+        #story_img {
+            max-height: 97%;
+            max-width: 97%;
+            width: auto;
+            height: auto;
         
+        }
+
+        .buttons {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 24px;
+
+        }
     </style>
     <body>
 
@@ -55,10 +79,21 @@
 
 
         <div id="container">
-            <div id="left_pane"></div>
+            <div id="left_pane">
+                <img id="story_img" src="images/cat2.jpg" />
+            
+            </div>
             <div id="right_pane"></div>
-                <div id="story_text"></div>
-                <div id="button_choices"></div>
+                <div id="story_text">
+                    <p>Welcome to the Ice Creame Shop</p>
+                
+                </div>
+                <div id="button_choices">
+                
+                    <a class="buttons" href="">Yes</a>
+                    <a class="buttons" href="">No</a>
+
+                </div>
         </div>
     </body>
 </html>
