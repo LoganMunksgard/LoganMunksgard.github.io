@@ -3,18 +3,17 @@
     <head>
         <title>Contact Me</title>
         <link rel="stylesheet" type="text/css" href="css/navbar.css" />
-    </head>
-    <style>
+        <style>
         #container {
             position: absolute;
             left: 0px;
             right: 0px;
             top: 90px;
             bottom: 0px;
-            background-color: red;
+            
         }
         #left_pane {
-            background-color: green;
+            
             height: 100%;
             width: 56%;
             float: left;
@@ -23,22 +22,24 @@
             justify-content: center;
         }
         #right_pane {
-            background-color: blue;
+            
             height: 100%;
             width: 44%;
             float: right;
         }
         #story_text {
-            background-color: yellow;
+            
             height: 80%;
+            width: 44%;
             float:right;
 
         }
         #button_choices {
-          background-color: pink;
+          
           height: 20%;
           display: flex;
           align-items: center;
+          justify-content: center;
 
         }
         #story_img {
@@ -55,11 +56,13 @@
             background-color: black;
             padding: 10px;
             border-radius: 8px;
-            font-size: 24px;
+            font-size: 16px;
             margin: 10px;
 
         }
     </style>
+    </head>
+    
     <body>
 
         <ul class="navbar">
@@ -87,15 +90,39 @@
             </div>
             <div id="right_pane"></div>
                 <div id="story_text">
-                    <p>Welcome to the Ice Creame Shop</p>
-                
+                    <p id="p1">Welcome to the Ice Creame Shop</p>
+                    <p id="p2">maby</p>
+                    <p id="p3">i might</p>                    
+
                 </div>
                 <div id="button_choices">
                 
-                    <a class="buttons" href="">Yes</a>
-                    <a class="buttons" href="">No</a>
+                    <a id="b1" class="buttons" href="" onclick="bclick(1)">Yes</a>
+                    <a id="b2" class="buttons" href="" onclick="bclick(2)">No</a>
 
                 </div>
         </div>
+
+    <script>
+        var b1 = document.getElementById("b1");
+        var b2 = document.getElementById("b2");
+        var img = document.getElementById("story_img");
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        var state = "intro";
+        intro();
+
+        function intro() {
+            img.src = "images/people_camp.jpg";
+            b1.innerHTML = "Stay in School";
+            b2.innerHTML = "Go to Camp";
+            p1.innerHTML = "A long long time ago in a galaxy far away. The year is 3000 BBY. Your name is Darth Nilus";
+            p2.innerHTML = "Consume the life force or find another planet to sustain the darkness";
+            p3.style.display = "none";
+        }
+            
+
+    </script>
     </body>
 </html>
