@@ -20,12 +20,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
         }
         #right_pane {
             
             height: 100%;
             width: 44%;
             float: right;
+
         }
         #story_text {
             
@@ -121,7 +123,31 @@
             p2.innerHTML = "Consume the life force or find another planet to sustain the darkness";
             p3.style.display = "none";
         }
-            
+
+        function stayInSchool() {
+            img.src = "images/cat_brown.jpg";
+            p1.innerHTML = "Begin traning for powers";
+            p2.innerHTML = "Meet other kids at the academy";
+            p3.innerHTML = "Would you like to try to escape";
+            b1.innerHTML = "Yes";
+            b2.innerHTML = "No";
+
+        }
+
+        //////State Machine
+        function bclick(buton){
+            if (state == "intro"){
+                if (button == 1){
+                    stayInSchool();
+                    state="stayInSchool";
+                }
+                else if(button == 2){
+                    goToCamp();
+                    state = "goToCamp";
+                }
+            }
+
+        }
 
     </script>
     </body>
