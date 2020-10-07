@@ -117,15 +117,15 @@
         intro();
 
         function intro() {
-            img.src = "images/people_camp.jpg";
-            b1.innerHTML = "Stay in School";
-            b2.innerHTML = "Go to Camp";
+            img.src = "images/nilus1.jpg";
+            b1.innerHTML = "Stay and Consume the Planet";
+            b2.innerHTML = "Go find another planet to consume its life force";
             p1.innerHTML = "A long long time ago in a galaxy far away. The year is 3000 BBY. Your name is Darth Nilus";
-            p2.innerHTML = "Consume the life force or find another planet to sustain the darkness";
+            p2.innerHTML = "Will you consume the life force or find another planet to sustain the darkness";
             p3.style.display = "none";
         }
 
-        function stayInSchool() {
+        function stayAndConsumeThePlanet() {
             img.src = "images/cat_brown.jpg";
             p1.innerHTML = "Begin traning for powers";
             p2.innerHTML = "Meet other kids at the academy";
@@ -134,18 +134,38 @@
             b2.innerHTML = "No";
 
         }
+        function escape() {
+            img.src = "images/cat_brown.jpg";
+            p1.innerHTML = "you run and find another planet";
+            p2.innerHTML = "go to Hoth";
+            p3.innerHTML = "Would you like to try to escape";
+            b1.innerHTML = "Yes";
+            b2.innerHTML = "No";
+
+        }
 
         //////State Machine
-        function bclick(buton){
+        function bclick(button){
             if (state == "intro"){
                 if (button == 1){
-                    stayInSchool();
-                    state="stayInSchool";
+                    stayAndConsumeThePlanet();
+                    state="stayAndConsumeThePlanet";
                 }
                 else if(button == 2){
-                    goToCamp();
-                    state = "goToCamp";
+                    goFindAnotherPlanetToConsumeItsLifeForce();
+                    state = "goFindAnotherPlanetToConsumeItsLifeForce";
                 }
+            }
+            else if(state == "stayAndConsumeThePlanet"){
+                if(button == 1){ 
+                    escape();
+                    state = "escape";
+                }
+                else if(button == 2){
+                    intenseTraning();
+                    state = "intenseTraning";
+                }
+
             }
 
         }
