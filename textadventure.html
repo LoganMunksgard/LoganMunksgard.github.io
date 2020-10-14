@@ -126,7 +126,7 @@
         }
 
         function stayAndConsumeThePlanet() {
-            img.src = "images/cat_brown.jpg";
+            img.src = "images/yavin4.jpg";
             p1.innerHTML = "Nilus: It it is done, I, I, I, need more. Darkness: thankkk youuu Nilus: We are moving on now, don't make this difficult";
             p2.innerHTML = "The darkness has been suppressed but not for long. There wasnt enough life force to sustain you for a long time you need to hurry and find another planet";
             p3.innerHTML = "Will you go to the forest moon of Endor or go to the Ice Planet of Hoth";
@@ -134,8 +134,17 @@
             b2.innerHTML = "Hoth";
 
         }
-        function escape() {
-            img.src = "images/cat_brown.jpg";
+        function goFindAnotherPlanetToConsumeItsLifeForce() {
+            img.src = "images/space2.jpg";
+            p1.innerHTML = "You leave the planet in search of another planet to consume its life force";
+            p2.innerHTML = "You have only two options the forest moon of Endor or the Ice Planet of Hoth";
+            b1.innerHTML = "Endor";
+            b2.innerHTML = "Hoth";
+
+
+        }
+        function endor() {
+            img.src = "images/endor.jpg";
             p1.innerHTML = "You have arrived on Endor there is a large amount if life force here. Enough to keep you alive for awhile";
             p2.innerHTML = "Go to the Ice Planet of Hoth";
             p3.innerHTML = "Go to the Forest Moon of Endor";
@@ -163,21 +172,33 @@
                     state = "goFindAnotherPlanetToConsumeItsLifeForce";
                 }
             }
+            else if(state = "goFindAnotherPlanetToConsumeItsLifeForce") {
+                if(button == 1) {
+                    endor();
+                    state = "endor";
+                }
+
+
+            }
             else if(state == "stayAndConsumeThePlanet"){
                 if(button == 1){ 
-                    escape();
-                    state = "escape";
+                    endor();
+                    state = "endor";
                 }
                 else if(button == 2){
-                    intenseTraning();
-                    state = "intenseTraning";
+                    findAnotherPlanet();
+                    state = "findAnotherPlanet";
                 }
                 
             }
-            else if(state == "goToCoruscant") {
+            else if(state == "endor") {
                 if(button == 1){
                 goToCoruscant();
                 state = "goToCoruscant";
+                }
+                else if(button == 2){
+                stayOnEndor();
+                state = "stayOnEndor";
                 }
             }
 
