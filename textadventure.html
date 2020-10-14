@@ -129,7 +129,7 @@
             img.src = "images/cat_brown.jpg";
             p1.innerHTML = "Nilus: It it is done, I, I, I, need more. Darkness: thankkk youuu Nilus: We are moving on now, don't make this difficult";
             p2.innerHTML = "The darkness has been suppressed but not for long. There wasnt enough life force to sustain you for a long time you need to hurry and find another planet";
-            p3.innerHTML = "Will you go to the forest moon of Yavin 4 or go to the Ice Planet of Hoth";
+            p3.innerHTML = "Will you go to the forest moon of Endor or go to the Ice Planet of Hoth";
             b1.innerHTML = "Endor";
             b2.innerHTML = "Hoth";
 
@@ -144,7 +144,11 @@
 
         }
         function goToCoruscant() {
-            p1.innerHTML = ""
+            p1.innerHTML = "You plan with the other sith to attack the Jedi Temple"
+            p2.innerHTML = "You attack the temple alot of the sith are being taken down"
+            p3.innerHTML = "Do you stay and fight for you life or flee and live another day"
+            b1.innerHTML = "Stay and fight"
+            b2.innerHTML = "Run and live another day"
 
         }
         //////State Machine
@@ -168,9 +172,12 @@
                     intenseTraning();
                     state = "intenseTraning";
                 }
-                else if(button == 1){
-                    goToCoruscant();
-                    state = "goToCoruscant";
+                
+            }
+            else if(state == "goToCoruscant") {
+                if(button == 1){
+                goToCoruscant();
+                state = "goToCoruscant";
                 }
             }
 
