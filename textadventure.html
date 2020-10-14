@@ -140,25 +140,36 @@
             p2.innerHTML = "You have only two options the forest moon of Endor or the Ice Planet of Hoth";
             b1.innerHTML = "Endor";
             b2.innerHTML = "Hoth";
-
-
         }
         function endor() {
             img.src = "images/endor.jpg";
             p1.innerHTML = "You have arrived on Endor there is a large amount if life force here. Enough to keep you alive for awhile";
-            p2.innerHTML = "";
-            p3.innerHTML = "";
+            p2.innerHTML = "There are sith meeting at Coruscant";
+            p3.innerHTML = "Will you go or stay on Endor";
             b1.innerHTML = "Go to Coruscant";
-            b2.innerHTML = "Stay one Endor";
+            b2.innerHTML = "Stay on Endor";
+
+        }
+        function hoth() {
+            img.src = "images/hoth.jpg";
+            p1.innerHTML = "There isnt alot of life force here.";
+            p2.innerHTML = "The darkness consumes you. You have died because there wasnt enough life force for you to consume.";
+            p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects";
+            b1.innerHTML = "Back to begining";
+            b2.innerHTML = "Back to begining"
 
         }
         function goToCoruscant() {
-            p1.innerHTML = "You plan with the other sith to attack the Jedi Temple"
-            p2.innerHTML = "You attack the temple alot of the sith are being taken down"
-            p3.innerHTML = "Do you stay and fight for you life or flee and live another day"
-            b1.innerHTML = "Stay and fight"
-            b2.innerHTML = "Run and live another day"
-
+            p1.innerHTML = "You plan with the other sith to attack the Jedi Temple";
+            p2.innerHTML = "You attack the temple alot of the sith are being taken down";
+            p3.innerHTML = "Do you stay and fight for you life or flee and live another day";
+            b1.innerHTML = "Stay and fight";
+            b2.innerHTML = "Run and live another day";
+        }
+        function stayOnEndor() {
+            p1.innerHTML = "You have supressed the darkness for awhile"
+            p2.innerHTML = "There is enough life force to last you a couple of months. This is The End."
+            p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects"
         }
         //////State Machine
         function bclick(button){
@@ -177,28 +188,39 @@
                     endor();
                     state = "endor";
                 }
-
-
+                if(button == 2) {
+                    hoth();
+                    state = "hoth";
+                }
             }
             else if(state == "stayAndConsumeThePlanet"){
                 if(button == 1){ 
                     endor();
                     state = "endor";
                 }
-                else if(button == 2){
-                    findAnotherPlanet();
-                    state = "findAnotherPlanet";
+                if(button == 2){
+                    hoth();
+                    state = "hoth";
                 }
-                
             }
             else if(state == "endor") {
-                if(button == 1){
-                goToCoruscant();
-                state = "goToCoruscant";
+                if(button == 1) {
+                    goToCoruscant();
+                    state = "goToCoruscant";
                 }
-                else if(button == 2){
-                stayOnEndor();
-                state = "stayOnEndor";
+                if(button == 2){
+                    stayOnEndor();
+                    state = "stayOnEndor";
+                }
+            }
+            else if(state =="hoth") {
+                if(button == 1) {
+                    intro();
+                    state = "intro";
+                }
+                if(button == 2) {
+                    intro();
+                    state = "intro";
                 }
             }
 
