@@ -128,24 +128,23 @@
         function stayAndConsumeThePlanet() {
             img.src = "images/yavin4.jpg";
             p1.innerHTML = "Nilus: It it is done, I, I, I, need more. Darkness: thankkk youuu Nilus: We are moving on now, don't make this difficult";
-            p2.innerHTML = "The darkness has been suppressed but not for long. There wasnt enough life force to sustain you for a long time you need to hurry and find another planet";
-            p3.innerHTML = "Will you go to the forest moon of Endor or go to the Ice Planet of Hoth";
+            p2.innerHTML = "The darkness has been suppressed but not for long. There wasnt enough life force to sustain you for a long time you need to hurry and find another planet.";
+            p3.innerHTML = "Will you go to the forest moon of Endor or go to the Ice Planet of Hoth.";
             b1.innerHTML = "Endor";
             b2.innerHTML = "Hoth";
-
         }
         function goFindAnotherPlanetToConsumeItsLifeForce() {
             img.src = "images/space2.jpg";
-            p1.innerHTML = "You leave the planet in search of another planet to consume its life force";
-            p2.innerHTML = "You have only two options the forest moon of Endor or the Ice Planet of Hoth";
+            p1.innerHTML = "You leave the planet in search of another planet to consume its life force.";
+            p2.innerHTML = "You have only two options the forest moon of Endor or the Ice Planet of Hoth.";
             b1.innerHTML = "Endor";
             b2.innerHTML = "Hoth";
         }
         function endor() {
             img.src = "images/endor.jpg";
-            p1.innerHTML = "You have arrived on Endor there is a large amount if life force here. Enough to keep you alive for awhile";
-            p2.innerHTML = "There are sith meeting at Coruscant";
-            p3.innerHTML = "Will you go or stay on Endor";
+            p1.innerHTML = "You have arrived on Endor there is a large amount if life force here. Enough to keep you alive for awhile.";
+            p2.innerHTML = "There are sith meeting at Coruscant.";
+            p3.innerHTML = "Will you go or stay on Endor.";
             b1.innerHTML = "Go to Coruscant";
             b2.innerHTML = "Stay on Endor";
 
@@ -154,15 +153,15 @@
             img.src = "images/hoth.jpg";
             p1.innerHTML = "There isnt alot of life force here.";
             p2.innerHTML = "The darkness consumes you. You have died because there wasnt enough life force for you to consume.";
-            p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects";
+            p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects.";
             b1.innerHTML = "Back to beginning";
-            b2.style.display = "";
-
+            b2.innerHTML = "Back to beginning";
         }
         function goToCoruscant() {
-            p1.innerHTML = "You plan with the other sith to attack the Jedi Temple";
-            p2.innerHTML = "You attack the temple alot of the sith are being taken down";
-            p3.innerHTML = "Do you stay and fight for you life or flee and live another day";
+            img.src = "images/coruscant.jpg";
+            p1.innerHTML = "You plan with the other sith to attack the Jedi Temple.";
+            p2.innerHTML = "You attack the temple alot of the sith are being taken down.";
+            p3.innerHTML = "Do you stay and fight for you life or flee and live another day.";
             b1.innerHTML = "Stay and fight";
             b2.innerHTML = "Run and live another day";
         }
@@ -170,13 +169,16 @@
             p1.innerHTML = "You have supressed the darkness for awhile.";
             p2.innerHTML = "There is enough life force to last you a couple of months. This is The End.";
             p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects.";
+            b1.innerHTML = "Back to beginning";
+            b2.innerHTML = "Back to beginning";
         }
         function stayAndFight() {
+            img.src = "images/battle.jpg";
             p1.innerHTML = "You try you hardest against the Jedi but there are too many of them.";
-            p2.innerHTML = "You are slain by a Jedi";
-            p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects";
+            p2.innerHTML = "You are slain by a Jedi.";
+            p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects.";
             b1.innerHTML = "Back to beginning";
-            b2.style.display = "";
+            b2.innerHTML = "Back to beginning";
         }
         //////State Machine
         function bclick(button){
@@ -185,12 +187,12 @@
                     stayAndConsumeThePlanet();
                     state="stayAndConsumeThePlanet";
                 }
-                else if(button == 2){
+                if(button == 2){
                     goFindAnotherPlanetToConsumeItsLifeForce();
                     state = "goFindAnotherPlanetToConsumeItsLifeForce";
                 }
             }
-            else if(state = "goFindAnotherPlanetToConsumeItsLifeForce") {
+            else if(state == "goFindAnotherPlanetToConsumeItsLifeForce") {
                 if(button == 1) {
                     endor();
                     state = "endor";
@@ -230,6 +232,37 @@
                     state = "intro";
                 }
             }
+            else if(state =="goToCoruscant"){
+                if(button == 1){
+                    stayAndFight();
+                    state = "stayAndFight";
+                }
+                if(button == 2){
+                    runAndLiveAnotherDay();
+                    state = "runAndLiveAnotherDay";
+                }
+            }
+            else if(state =="stayOnEndor") {
+                if(button == 1) {
+                    intro();
+                    state = "intro";
+                }
+                if(button == 2) {
+                    intro();
+                    state = "intro";
+                }
+            }
+            else if(state =="stayAndFight") {
+                if(button == 1) {
+                    intro();
+                    state = "intro";
+                }
+                if(button == 2) {
+                    intro();
+                    state = "intro";
+                }
+            }
+            
 
         }
 
