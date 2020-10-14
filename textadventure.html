@@ -155,8 +155,8 @@
             p1.innerHTML = "There isnt alot of life force here.";
             p2.innerHTML = "The darkness consumes you. You have died because there wasnt enough life force for you to consume.";
             p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects";
-            b1.innerHTML = "Back to begining";
-            b2.innerHTML = "Back to begining"
+            b1.innerHTML = "Back to beginning";
+            b2.style.display = "";
 
         }
         function goToCoruscant() {
@@ -167,9 +167,16 @@
             b2.innerHTML = "Run and live another day";
         }
         function stayOnEndor() {
-            p1.innerHTML = "You have supressed the darkness for awhile"
-            p2.innerHTML = "There is enough life force to last you a couple of months. This is The End."
-            p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects"
+            p1.innerHTML = "You have supressed the darkness for awhile.";
+            p2.innerHTML = "There is enough life force to last you a couple of months. This is The End.";
+            p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects.";
+        }
+        function stayAndFight() {
+            p1.innerHTML = "You try you hardest against the Jedi but there are too many of them.";
+            p2.innerHTML = "You are slain by a Jedi";
+            p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects";
+            b1.innerHTML = "Back to beginning";
+            b2.style.display = "";
         }
         //////State Machine
         function bclick(button){
