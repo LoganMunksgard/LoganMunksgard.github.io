@@ -180,6 +180,14 @@
             b1.innerHTML = "Back to beginning";
             b2.innerHTML = "Back to beginning";
         }
+        function runAndLiveAnotherDay() {
+            img.src ="images/";
+            p1.innerHTML = "You successfully escaped";
+            p2.innerHTML = "You made a great choice, there werent many survivors.";
+            p3.innerHTML = "Thank you for playing my Text Adventure feel free to check out some of my other projects.";
+            b1.innerHTML = "Back to beginning";
+            b2.innerHTML = "Back to beginning";
+        }
         //////State Machine
         function bclick(button){
             if (state == "intro"){
@@ -253,6 +261,16 @@
                 }
             }
             else if(state =="stayAndFight") {
+                if(button == 1) {
+                    intro();
+                    state = "intro";
+                }
+                if(button == 2) {
+                    intro();
+                    state = "intro";
+                }
+            }
+            else if(state =="runAndLiveAnotherDay") {
                 if(button == 1) {
                     intro();
                     state = "intro";
